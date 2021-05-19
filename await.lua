@@ -3,7 +3,7 @@
 --- DateTime: 5/18/21 11:02 PM
 ---
 
-sync = setmetatable({}, {
+await = setmetatable({}, {
     __index = function(_, key)
         local theFunction = _G[key]
         if not theFunction then

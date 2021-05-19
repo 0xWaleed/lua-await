@@ -60,8 +60,8 @@ describe('await', function()
             local co = coroutine.create(function()
                 local t = os.time() + .2
                 while t > os.time() do
-                    cb(5)
                 end
+                cb(5)
             end)
             coroutine.resume(co)
         end)

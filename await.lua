@@ -28,7 +28,7 @@ await =
                 if isYieldable then
                     theFunction(table.unpack(args))
                     while not isFinished do
-                        coroutine.yield()
+                        coroutine.yield(1)
                     end
                     return table.unpack(result)
                 end
@@ -37,7 +37,7 @@ await =
                     function(...)
                         theFunction(table.unpack(args))
                         while not isFinished do
-                            coroutine.yield()
+                            coroutine.yield(1)
                         end
                         return table.unpack(result)
                     end
